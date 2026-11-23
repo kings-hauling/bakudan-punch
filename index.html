@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爆弾パンチ｜阪神尼崎のカレー屋（開業準備中）トマトベースのニンニク醤油カレー</title>
+<meta name="description" content="爆弾パンチは、阪神尼崎エリアで2027年6月オープン予定のカレー屋です。看板メニューはトマトベースのニンニク醤油カレー。子どもがお金を気にせず食べられる子供食堂の形を目指し、開業資金のクラウドファンディングをCAMPFIREで実施しています。">
+<meta property="og:title" content="爆弾パンチ｜阪神尼崎のカレー屋（開業準備中）">
+<meta property="og:description" content="トマトベースのニンニク醤油カレーの店「爆弾パンチ」。子どもが笑顔でいつでも食べられるカレー屋を目指して、開業準備中です。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.webp">
+<style>
+  :root{
+    --bg:#0d0b08;
+    --bg2:#171310;
+    --panel:#1c1712;
+    --gold:#c9a227;
+    --gold-bright:#e8c766;
+    --gold-dim:#8a6d1f;
+    --text:#f2ead8;
+    --text-dim:#b8ab90;
+    --red:#a52a1e;
+    --line:#3a2f1c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    line-height:1.9;
+    letter-spacing:.02em;
+  }
+  .sans{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;}
+  a{color:var(--gold-bright);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+
+  /* ===== ヘッダー ===== */
+  header{
+    border-bottom:1px solid var(--line);
+    background:rgba(13,11,8,.92);
+    position:sticky;top:0;z-index:10;
+  }
+  .header-in{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:960px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);}
+  .brand img{width:44px;height:44px;object-fit:contain;}
+  .brand .name{font-size:1.25rem;font-weight:700;letter-spacing:.14em;color:var(--gold-bright);}
+  .badge{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+    font-size:.78rem;color:#0d0b08;background:var(--gold);
+    padding:4px 12px;border-radius:999px;font-weight:700;letter-spacing:.08em;white-space:nowrap;
+  }
+
+  /* ===== ヒーロー ===== */
+  .hero{
+    text-align:center;
+    padding:72px 20px 64px;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,162,39,.16), transparent 70%),
+      linear-gradient(180deg, var(--bg2), var(--bg));
+    border-bottom:1px solid var(--line);
+  }
+  .hero .logo{
+    width:min(340px,72vw);
+    filter:drop-shadow(0 12px 32px rgba(0,0,0,.7));
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,7vw,4rem);
+    letter-spacing:.22em;
+    color:var(--gold-bright);
+    margin:28px 0 6px;
+    text-shadow:0 2px 18px rgba(201,162,39,.35);
+  }
+  .hero .sub{color:var(--text-dim);font-size:clamp(.95rem,2.6vw,1.1rem);letter-spacing:.12em;}
+  .catch{
+    margin:40px auto 8px;max-width:640px;
+  }
+  .catch p{
+    font-size:clamp(1.35rem,4.4vw,2rem);
+    font-weight:700;line-height:1.6;letter-spacing:.06em;
+    padding:10px 0;
+  }
+  .catch p + p{border-top:1px solid var(--line);}
+  .catch .accent{color:var(--gold-bright);}
+  .hero .open-info{
+    margin-top:34px;display:inline-block;
+    border:1px solid var(--gold-dim);border-radius:6px;
+    padding:10px 26px;color:var(--text);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+    font-size:.95rem;letter-spacing:.06em;background:rgba(201,162,39,.06);
+  }
+
+  /* ===== セクション共通 ===== */
+  section{padding:72px 0;}
+  section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{text-align:center;margin-bottom:42px;}
+  .sec-head .num{color:var(--gold);font-size:.85rem;letter-spacing:.4em;}
+  .sec-head h2{
+    font-size:clamp(1.6rem,4.6vw,2.2rem);letter-spacing:.14em;margin-top:8px;color:var(--text);
+  }
+  .sec-head h2::after{
+    content:"";display:block;width:56px;height:2px;background:var(--gold);margin:16px auto 0;
+  }
+  p.lead{max-width:680px;margin:0 auto;text-align:center;color:var(--text-dim);}
+
+  /* ===== 看板メニュー ===== */
+  .menu-card{
+    max-width:680px;margin:0 auto;background:var(--panel);
+    border:1px solid var(--gold-dim);border-radius:10px;
+    padding:38px 34px;text-align:center;
+    box-shadow:0 16px 40px rgba(0,0,0,.45);
+  }
+  .menu-card .label{
+    display:inline-block;font-size:.78rem;letter-spacing:.3em;color:var(--gold);
+    border:1px solid var(--gold-dim);border-radius:999px;padding:3px 14px;margin-bottom:18px;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+  }
+  .menu-card h3{font-size:clamp(1.7rem,5vw,2.3rem);letter-spacing:.1em;color:var(--gold-bright);}
+  .menu-card .base{
+    margin-top:8px;font-size:1.05rem;color:var(--text);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;font-weight:700;letter-spacing:.1em;
+  }
+  .menu-card p.desc{margin-top:18px;color:var(--text-dim);text-align:left;}
+
+  /* ===== 想い ===== */
+  .omoi{max-width:680px;margin:0 auto;}
+  .omoi p{margin-bottom:1.6em;color:var(--text-dim);}
+  .omoi p strong{color:var(--text);}
+  .omoi .big{
+    font-size:clamp(1.25rem,3.8vw,1.6rem);color:var(--text);text-align:center;line-height:1.8;margin-bottom:1.4em;
+  }
+
+  /* ===== CF ===== */
+  .cf-box{
+    max-width:680px;margin:0 auto;text-align:center;background:var(--panel);
+    border:1px solid var(--line);border-radius:10px;padding:40px 32px;
+  }
+  .cf-box p{color:var(--text-dim);margin-bottom:28px;}
+  .btn{
+    display:inline-block;text-decoration:none;
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    color:#171106;font-weight:700;letter-spacing:.08em;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+    padding:16px 38px;border-radius:8px;font-size:1.05rem;
+    box-shadow:0 8px 24px rgba(201,162,39,.3);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,162,39,.4);}
+
+  /* ===== チケット ===== */
+  .steps{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+    max-width:820px;margin:40px auto 0;
+  }
+  .step{
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:26px 20px;text-align:center;
+  }
+  .step .n{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--gold);color:var(--gold-bright);
+    font-size:1.1rem;margin-bottom:14px;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  }
+  .step h3{font-size:1.05rem;margin-bottom:10px;letter-spacing:.05em;}
+  .step p{font-size:.9rem;color:var(--text-dim);text-align:left;}
+  .ticket-price{
+    text-align:center;margin-top:36px;font-size:1.1rem;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+  }
+  .ticket-price strong{color:var(--gold-bright);font-size:1.5rem;}
+  .ticket-note{
+    max-width:680px;margin:22px auto 0;text-align:center;
+    border:1px dashed var(--gold-dim);border-radius:8px;padding:16px 20px;
+    color:var(--text-dim);font-size:.95rem;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+  }
+
+  /* ===== 店舗情報 ===== */
+  .info-table{max-width:560px;margin:0 auto;width:100%;border-collapse:collapse;}
+  .info-table th,.info-table td{
+    border-bottom:1px solid var(--line);padding:14px 10px;text-align:left;vertical-align:top;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;font-size:.98rem;
+  }
+  .info-table th{color:var(--gold);width:34%;letter-spacing:.08em;font-weight:700;white-space:nowrap;}
+  .info-table td{color:var(--text);}
+
+  footer{
+    border-top:1px solid var(--line);padding:36px 20px;text-align:center;
+    color:var(--text-dim);font-size:.85rem;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+  }
+  footer .fname{color:var(--gold-bright);letter-spacing:.2em;font-size:1rem;margin-bottom:6px;}
+
+  @media (max-width:640px){
+    .steps{grid-template-columns:1fr;}
+    section{padding:54px 0;}
+    .header-in{padding:10px 14px;}
+    .brand .name{font-size:1.05rem;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "爆弾パンチ",
+  "servesCuisine": "カレー",
+  "image": "logo.webp",
+  "description": "阪神尼崎エリアで2027年6月オープン予定のカレー屋。看板メニューはトマトベースのニンニク醤油カレー。子どもがお金を気にせず食べられる子供食堂の形を目指しています。",
+  "areaServed": "阪神尼崎エリア",
+  "openingDate": "2027-06"
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-in">
+    <a class="brand" href="#">
+      <img src="logo.webp" alt="爆弾パンチ ロゴ">
+      <span class="name">爆弾パンチ</span>
+    </a>
+    <span class="badge">開業準備中</span>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="logo" src="logo.webp" alt="爆弾パンチのロゴ（ダイナマイトを巻いた腕に赤いボクシンググローブ）">
+  <h1>爆弾パンチ</h1>
+  <p class="sub">阪神尼崎のカレー屋</p>
+  <div class="catch">
+    <p>ばくだんみたいに<span class="accent">強烈な一口</span></p>
+    <p>パンチを喰らったみたいな<span class="accent">衝撃</span></p>
+    <p><span class="accent">反則級</span>のインパクト</p>
+  </div>
+  <div class="open-info">2027年6月オープン予定 ／ 阪神尼崎エリア</div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num sans">MENU</div>
+      <h2>看板メニュー</h2>
+    </div>
+    <div class="menu-card">
+      <span class="label">看板 ・ トマトベース</span>
+      <h3>ニンニク醤油カレー</h3>
+      <p class="base">ベースはトマト。</p>
+      <p class="desc">トマトの酸味と旨みを土台に、ニンニクと醤油の香りを効かせた、爆弾パンチの看板カレーです。一口目から強烈なインパクトのある味を目指して、開業に向けて準備を進めています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="omoi" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num sans">OUR WISH</div>
+      <h2>店の想い</h2>
+    </div>
+    <div class="omoi">
+      <p class="big">子どもがお金を気にせず、<br>笑顔でいつでも食べられるカレー屋をつくる。</p>
+      <p>爆弾パンチが目指すのは、<strong>子どもがお金を気にせず笑顔でいつでも食べられるカレー屋</strong>です。お腹いっぱい食べたいときに、お金のことを心配せずに来られる場所をつくりたいと考えています。</p>
+      <p>将来は、<strong>全店舗を子供食堂兼用</strong>にし、<strong>子どもは無料で食べられる形</strong>を目指します。そのための仕組みの一つが、下でご紹介する「子供ご馳走チケット」です。</p>
+    </div>
+  </div>
+</section>
+
+<section id="ticket">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num sans">TICKET</div>
+      <h2>子供食堂チケットのご案内</h2>
+    </div>
+    <p class="lead">大人のお客さんが「子供ご馳走チケット」を買うと、子どもがカレーを1食食べられる仕組みです。応援したい気持ちが、そのまま子どもの一食になります。</p>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <h3>大人がチケットを買う</h3>
+        <p>大人のお客さんが「子供ご馳走チケット」を購入します。</p>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <h3>チケットが店に貯まる</h3>
+        <p>買われたチケットは、子どもの食事のために店に貯まっていきます。</p>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <h3>子どもが1食食べられる</h3>
+        <p>貯まったチケットで、子どもがカレーを1食食べられます。</p>
+      </div>
+    </div>
+    <p class="ticket-price">子供ご馳走チケット <strong>1枚 500円</strong> ＝ 子どものカレー1食分</p>
+    <div class="ticket-note">チケットの販売は開店後に始まります。現在は販売していません。</div>
+  </div>
+</section>
+
+<section id="cf" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num sans">CROWDFUNDING</div>
+      <h2>クラウドファンディング</h2>
+    </div>
+    <div class="cf-box">
+      <p>爆弾パンチの開業資金は、CAMPFIREのクラウドファンディングで募っています。子どもが笑顔で食べられるカレー屋を一緒につくる応援を、よろしくお願いします。</p>
+      <a class="btn" href="https://camp-fire.jp/projects/999471" target="_blank" rel="noopener">CAMPFIREで応援する →</a>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num sans">SHOP INFO</div>
+      <h2>店舗情報</h2>
+    </div>
+    <table class="info-table">
+      <tr><th>店名</th><td>爆弾パンチ</td></tr>
+      <tr><th>エリア</th><td>阪神尼崎エリア</td></tr>
+      <tr><th>オープン</th><td>2027年6月予定（開業準備中）</td></tr>
+      <tr><th>看板メニュー</th><td>ニンニク醤油カレー（トマトベース）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fname">爆弾パンチ</div>
+  <div>阪神尼崎エリア ／ 2027年6月オープン予定（開業準備中）</div>
+</footer>
+
+</body>
+</html>
